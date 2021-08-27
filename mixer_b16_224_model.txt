@@ -1,0 +1,202 @@
+||||||||||| Model Stru |||||||||||
+stem.proj.weight
+blocks.0.mlp_tokens.fc1.weight
+blocks.0.mlp_tokens.fc2.weight
+blocks.0.mlp_channels.fc1.weight
+blocks.0.mlp_channels.fc2.weight
+blocks.1.mlp_tokens.fc1.weight
+blocks.1.mlp_tokens.fc2.weight
+blocks.1.mlp_channels.fc1.weight
+blocks.1.mlp_channels.fc2.weight
+blocks.2.mlp_tokens.fc1.weight
+blocks.2.mlp_tokens.fc2.weight
+blocks.2.mlp_channels.fc1.weight
+blocks.2.mlp_channels.fc2.weight
+blocks.3.mlp_tokens.fc1.weight
+blocks.3.mlp_tokens.fc2.weight
+blocks.3.mlp_channels.fc1.weight
+blocks.3.mlp_channels.fc2.weight
+blocks.4.mlp_tokens.fc1.weight
+blocks.4.mlp_tokens.fc2.weight
+blocks.4.mlp_channels.fc1.weight
+blocks.4.mlp_channels.fc2.weight
+blocks.5.mlp_tokens.fc1.weight
+blocks.5.mlp_tokens.fc2.weight
+blocks.5.mlp_channels.fc1.weight
+blocks.5.mlp_channels.fc2.weight
+blocks.6.mlp_tokens.fc1.weight
+blocks.6.mlp_tokens.fc2.weight
+blocks.6.mlp_channels.fc1.weight
+blocks.6.mlp_channels.fc2.weight
+blocks.7.mlp_tokens.fc1.weight
+blocks.7.mlp_tokens.fc2.weight
+blocks.7.mlp_channels.fc1.weight
+blocks.7.mlp_channels.fc2.weight
+blocks.8.mlp_tokens.fc1.weight
+blocks.8.mlp_tokens.fc2.weight
+blocks.8.mlp_channels.fc1.weight
+blocks.8.mlp_channels.fc2.weight
+blocks.9.mlp_tokens.fc1.weight
+blocks.9.mlp_tokens.fc2.weight
+blocks.9.mlp_channels.fc1.weight
+blocks.9.mlp_channels.fc2.weight
+blocks.10.mlp_tokens.fc1.weight
+blocks.10.mlp_tokens.fc2.weight
+blocks.10.mlp_channels.fc1.weight
+blocks.10.mlp_channels.fc2.weight
+blocks.11.mlp_tokens.fc1.weight
+blocks.11.mlp_tokens.fc2.weight
+blocks.11.mlp_channels.fc1.weight
+blocks.11.mlp_channels.fc2.weight
+head.weight
+0 th weight: stem.proj.weight , shape =  torch.Size([768, 3, 16, 16]) , weight.dtype =  torch.float32
+1 th weight: stem.proj.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+2 th weight: blocks.0.norm1.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+3 th weight: blocks.0.norm1.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+4 th weight: blocks.0.mlp_tokens.fc1.weight , shape =  torch.Size([384, 196]) , weight.dtype =  torch.float32
+5 th weight: blocks.0.mlp_tokens.fc1.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+6 th weight: blocks.0.mlp_tokens.fc2.weight , shape =  torch.Size([196, 384]) , weight.dtype =  torch.float32
+7 th weight: blocks.0.mlp_tokens.fc2.bias , shape =  torch.Size([196]) , weight.dtype =  torch.float32
+8 th weight: blocks.0.norm2.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+9 th weight: blocks.0.norm2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+10 th weight: blocks.0.mlp_channels.fc1.weight , shape =  torch.Size([3072, 768]) , weight.dtype =  torch.float32
+11 th weight: blocks.0.mlp_channels.fc1.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+12 th weight: blocks.0.mlp_channels.fc2.weight , shape =  torch.Size([768, 3072]) , weight.dtype =  torch.float32
+13 th weight: blocks.0.mlp_channels.fc2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+14 th weight: blocks.1.norm1.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+15 th weight: blocks.1.norm1.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+16 th weight: blocks.1.mlp_tokens.fc1.weight , shape =  torch.Size([384, 196]) , weight.dtype =  torch.float32
+17 th weight: blocks.1.mlp_tokens.fc1.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+18 th weight: blocks.1.mlp_tokens.fc2.weight , shape =  torch.Size([196, 384]) , weight.dtype =  torch.float32
+19 th weight: blocks.1.mlp_tokens.fc2.bias , shape =  torch.Size([196]) , weight.dtype =  torch.float32
+20 th weight: blocks.1.norm2.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+21 th weight: blocks.1.norm2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+22 th weight: blocks.1.mlp_channels.fc1.weight , shape =  torch.Size([3072, 768]) , weight.dtype =  torch.float32
+23 th weight: blocks.1.mlp_channels.fc1.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+24 th weight: blocks.1.mlp_channels.fc2.weight , shape =  torch.Size([768, 3072]) , weight.dtype =  torch.float32
+25 th weight: blocks.1.mlp_channels.fc2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+26 th weight: blocks.2.norm1.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+27 th weight: blocks.2.norm1.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+28 th weight: blocks.2.mlp_tokens.fc1.weight , shape =  torch.Size([384, 196]) , weight.dtype =  torch.float32
+29 th weight: blocks.2.mlp_tokens.fc1.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+30 th weight: blocks.2.mlp_tokens.fc2.weight , shape =  torch.Size([196, 384]) , weight.dtype =  torch.float32
+31 th weight: blocks.2.mlp_tokens.fc2.bias , shape =  torch.Size([196]) , weight.dtype =  torch.float32
+32 th weight: blocks.2.norm2.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+33 th weight: blocks.2.norm2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+34 th weight: blocks.2.mlp_channels.fc1.weight , shape =  torch.Size([3072, 768]) , weight.dtype =  torch.float32
+35 th weight: blocks.2.mlp_channels.fc1.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+36 th weight: blocks.2.mlp_channels.fc2.weight , shape =  torch.Size([768, 3072]) , weight.dtype =  torch.float32
+37 th weight: blocks.2.mlp_channels.fc2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+38 th weight: blocks.3.norm1.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+39 th weight: blocks.3.norm1.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+40 th weight: blocks.3.mlp_tokens.fc1.weight , shape =  torch.Size([384, 196]) , weight.dtype =  torch.float32
+41 th weight: blocks.3.mlp_tokens.fc1.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+42 th weight: blocks.3.mlp_tokens.fc2.weight , shape =  torch.Size([196, 384]) , weight.dtype =  torch.float32
+43 th weight: blocks.3.mlp_tokens.fc2.bias , shape =  torch.Size([196]) , weight.dtype =  torch.float32
+44 th weight: blocks.3.norm2.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+45 th weight: blocks.3.norm2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+46 th weight: blocks.3.mlp_channels.fc1.weight , shape =  torch.Size([3072, 768]) , weight.dtype =  torch.float32
+47 th weight: blocks.3.mlp_channels.fc1.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+48 th weight: blocks.3.mlp_channels.fc2.weight , shape =  torch.Size([768, 3072]) , weight.dtype =  torch.float32
+49 th weight: blocks.3.mlp_channels.fc2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+50 th weight: blocks.4.norm1.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+51 th weight: blocks.4.norm1.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+52 th weight: blocks.4.mlp_tokens.fc1.weight , shape =  torch.Size([384, 196]) , weight.dtype =  torch.float32
+53 th weight: blocks.4.mlp_tokens.fc1.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+54 th weight: blocks.4.mlp_tokens.fc2.weight , shape =  torch.Size([196, 384]) , weight.dtype =  torch.float32
+55 th weight: blocks.4.mlp_tokens.fc2.bias , shape =  torch.Size([196]) , weight.dtype =  torch.float32
+56 th weight: blocks.4.norm2.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+57 th weight: blocks.4.norm2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+58 th weight: blocks.4.mlp_channels.fc1.weight , shape =  torch.Size([3072, 768]) , weight.dtype =  torch.float32
+59 th weight: blocks.4.mlp_channels.fc1.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+60 th weight: blocks.4.mlp_channels.fc2.weight , shape =  torch.Size([768, 3072]) , weight.dtype =  torch.float32
+61 th weight: blocks.4.mlp_channels.fc2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+62 th weight: blocks.5.norm1.weight , shape = torch.Size([768]) , weight.dtype =  torch.float32
+63 th weight: blocks.5.norm1.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+64 th weight: blocks.5.mlp_tokens.fc1.weight , shape =  torch.Size([384, 196]) , weight.dtype =  torch.float32
+65 th weight: blocks.5.mlp_tokens.fc1.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+66 th weight: blocks.5.mlp_tokens.fc2.weight , shape =  torch.Size([196, 384]) , weight.dtype =  torch.float32
+67 th weight: blocks.5.mlp_tokens.fc2.bias , shape =  torch.Size([196]) , weight.dtype =  torch.float32
+68 th weight: blocks.5.norm2.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+69 th weight: blocks.5.norm2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+70 th weight: blocks.5.mlp_channels.fc1.weight , shape =  torch.Size([3072, 768]) , weight.dtype =  torch.float32
+71 th weight: blocks.5.mlp_channels.fc1.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+72 th weight: blocks.5.mlp_channels.fc2.weight , shape =  torch.Size([768, 3072]) , weight.dtype =  torch.float32
+73 th weight: blocks.5.mlp_channels.fc2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+74 th weight: blocks.6.norm1.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+75 th weight: blocks.6.norm1.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+76 th weight: blocks.6.mlp_tokens.fc1.weight , shape =  torch.Size([384, 196]) , weight.dtype =  torch.float32
+77 th weight: blocks.6.mlp_tokens.fc1.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+78 th weight: blocks.6.mlp_tokens.fc2.weight , shape =  torch.Size([196, 384]) , weight.dtype =  torch.float32
+79 th weight: blocks.6.mlp_tokens.fc2.bias , shape =  torch.Size([196]) , weight.dtype =  torch.float32
+80 th weight: blocks.6.norm2.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+81 th weight: blocks.6.norm2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+82 th weight: blocks.6.mlp_channels.fc1.weight , shape =  torch.Size([3072, 768]) , weight.dtype =  torch.float32
+83 th weight: blocks.6.mlp_channels.fc1.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+84 th weight: blocks.6.mlp_channels.fc2.weight , shape =  torch.Size([768, 3072]) , weight.dtype =  torch.float32
+85 th weight: blocks.6.mlp_channels.fc2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+86 th weight: blocks.7.norm1.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+87 th weight: blocks.7.norm1.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+88 th weight: blocks.7.mlp_tokens.fc1.weight , shape =  torch.Size([384, 196]) , weight.dtype =  torch.float32
+89 th weight: blocks.7.mlp_tokens.fc1.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+90 th weight: blocks.7.mlp_tokens.fc2.weight , shape =  torch.Size([196, 384]) , weight.dtype =  torch.float32
+91 th weight: blocks.7.mlp_tokens.fc2.bias , shape =  torch.Size([196]) , weight.dtype =  torch.float32
+92 th weight: blocks.7.norm2.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+93 th weight: blocks.7.norm2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+94 th weight: blocks.7.mlp_channels.fc1.weight , shape =  torch.Size([3072, 768]) , weight.dtype =  torch.float32
+95 th weight: blocks.7.mlp_channels.fc1.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+96 th weight: blocks.7.mlp_channels.fc2.weight , shape =  torch.Size([768, 3072]) , weight.dtype =  torch.float32
+97 th weight: blocks.7.mlp_channels.fc2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+98 th weight: blocks.8.norm1.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+99 th weight: blocks.8.norm1.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+100 th weight: blocks.8.mlp_tokens.fc1.weight , shape =  torch.Size([384, 196]) , weight.dtype =  torch.float32
+101 th weight: blocks.8.mlp_tokens.fc1.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+102 th weight: blocks.8.mlp_tokens.fc2.weight , shape =  torch.Size([196, 384]) , weight.dtype =  torch.float32
+103 th weight: blocks.8.mlp_tokens.fc2.bias , shape =  torch.Size([196]) , weight.dtype =  torch.float32
+104 th weight: blocks.8.norm2.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+105 th weight: blocks.8.norm2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+106 th weight: blocks.8.mlp_channels.fc1.weight , shape =  torch.Size([3072, 768]) , weight.dtype =  torch.float32
+107 th weight: blocks.8.mlp_channels.fc1.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+108 th weight: blocks.8.mlp_channels.fc2.weight , shape =  torch.Size([768, 3072]) , weight.dtype =  torch.float32
+109 th weight: blocks.8.mlp_channels.fc2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+110 th weight: blocks.9.norm1.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+111 th weight: blocks.9.norm1.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+112 th weight: blocks.9.mlp_tokens.fc1.weight , shape =  torch.Size([384, 196]) , weight.dtype =  torch.float32
+113 th weight: blocks.9.mlp_tokens.fc1.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+114 th weight: blocks.9.mlp_tokens.fc2.weight , shape =  torch.Size([196, 384]) , weight.dtype =  torch.float32
+115 th weight: blocks.9.mlp_tokens.fc2.bias , shape =  torch.Size([196]) , weight.dtype =  torch.float32
+116 th weight: blocks.9.norm2.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+117 th weight: blocks.9.norm2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+118 th weight: blocks.9.mlp_channels.fc1.weight , shape =  torch.Size([3072, 768]) , weight.dtype =  torch.float32
+119 th weight: blocks.9.mlp_channels.fc1.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+120 th weight: blocks.9.mlp_channels.fc2.weight , shape =  torch.Size([768, 3072]) , weight.dtype =  torch.float32
+121 th weight: blocks.9.mlp_channels.fc2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+122 th weight: blocks.10.norm1.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+123 th weight: blocks.10.norm1.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+124 th weight: blocks.10.mlp_tokens.fc1.weight , shape =  torch.Size([384, 196]) , weight.dtype =  torch.float32
+125 th weight: blocks.10.mlp_tokens.fc1.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+126 th weight: blocks.10.mlp_tokens.fc2.weight , shape =  torch.Size([196, 384]) , weight.dtype =  torch.float32
+127 th weight: blocks.10.mlp_tokens.fc2.bias , shape =  torch.Size([196]) , weight.dtype =  torch.float32
+128 th weight: blocks.10.norm2.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+129 th weight: blocks.10.norm2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+130 th weight: blocks.10.mlp_channels.fc1.weight , shape =  torch.Size([3072, 768]) , weight.dtype =  torch.float32
+131 th weight: blocks.10.mlp_channels.fc1.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+132 th weight: blocks.10.mlp_channels.fc2.weight , shape =  torch.Size([768, 3072]) , weight.dtype =  torch.float32
+133 th weight: blocks.10.mlp_channels.fc2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+134 th weight: blocks.11.norm1.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+135 th weight: blocks.11.norm1.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+136 th weight: blocks.11.mlp_tokens.fc1.weight , shape =  torch.Size([384, 196]) , weight.dtype =  torch.float32
+137 th weight: blocks.11.mlp_tokens.fc1.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+138 th weight: blocks.11.mlp_tokens.fc2.weight , shape =  torch.Size([196, 384]) , weight.dtype =  torch.float32
+139 th weight: blocks.11.mlp_tokens.fc2.bias , shape =  torch.Size([196]) , weight.dtype =  torch.float32
+140 th weight: blocks.11.norm2.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+141 th weight: blocks.11.norm2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+142 th weight: blocks.11.mlp_channels.fc1.weight , shape =  torch.Size([3072, 768]) , weight.dtype =  torch.float32
+143 th weight: blocks.11.mlp_channels.fc1.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+144 th weight: blocks.11.mlp_channels.fc2.weight , shape =  torch.Size([768, 3072]) , weight.dtype =  torch.float32
+145 th weight: blocks.11.mlp_channels.fc2.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+146 th weight: norm.weight , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+147 th weight: norm.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+148 th weight: head.weight , shape =  torch.Size([1000, 768]) , weight.dtype =  torch.float32
+149 th weight: head.bias , shape =  torch.Size([1000]) , weight.dtype =  torch.float32
+||||||||||| Model Stru |||||||||||
