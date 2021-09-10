@@ -1,0 +1,192 @@
+
+AMP not enabled. Training in float32.
+
+!!!!!!!!!!!!!!!!!!! RETRAIN !!!!!!!!!!!!!!!!!
+
+---------------> Loading admm trained file...
+!!! Loaded File:  mlp_mixer_slr/admm_model/admm_train/mlpmix_imagenet_72.596_config_mlp_0.7_irregular_tmp3.pt
+
+---------------> Accuracy before hardpruning
+ * Acc@1 72.578 Acc@5 90.136
+
+---------------> Accuracy after hard-pruning
+hard pruning
+ * Acc@1 72.578 Acc@5 90.136
+sparsity at layer module.stem.proj.weight is 0.0
+sparsity at layer module.blocks.0.norm1.weight is 0.0
+sparsity at layer module.blocks.0.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.0.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.0.norm2.weight is 0.0
+sparsity at layer module.blocks.0.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.0.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.1.norm1.weight is 0.0
+sparsity at layer module.blocks.1.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.1.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.1.norm2.weight is 0.0
+sparsity at layer module.blocks.1.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.1.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.2.norm1.weight is 0.0
+sparsity at layer module.blocks.2.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.2.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.2.norm2.weight is 0.0
+sparsity at layer module.blocks.2.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.2.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.3.norm1.weight is 0.0
+sparsity at layer module.blocks.3.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.3.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.3.norm2.weight is 0.0
+sparsity at layer module.blocks.3.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.3.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.4.norm1.weight is 0.0
+sparsity at layer module.blocks.4.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.4.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.4.norm2.weight is 0.0
+sparsity at layer module.blocks.4.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.4.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.5.norm1.weight is 0.0
+sparsity at layer module.blocks.5.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.5.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.5.norm2.weight is 0.0
+sparsity at layer module.blocks.5.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.5.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.6.norm1.weight is 0.0
+sparsity at layer module.blocks.6.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.6.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.6.norm2.weight is 0.0
+sparsity at layer module.blocks.6.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.6.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.7.norm1.weight is 0.0
+sparsity at layer module.blocks.7.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.7.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.7.norm2.weight is 0.0
+sparsity at layer module.blocks.7.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.7.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.8.norm1.weight is 0.0
+sparsity at layer module.blocks.8.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.8.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.8.norm2.weight is 0.0
+sparsity at layer module.blocks.8.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.8.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.9.norm1.weight is 0.0
+sparsity at layer module.blocks.9.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.9.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.9.norm2.weight is 0.0
+sparsity at layer module.blocks.9.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.9.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.10.norm1.weight is 0.0
+sparsity at layer module.blocks.10.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.10.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.10.norm2.weight is 0.0
+sparsity at layer module.blocks.10.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.10.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.11.norm1.weight is 0.0
+sparsity at layer module.blocks.11.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.11.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.11.norm2.weight is 0.0
+sparsity at layer module.blocks.11.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.11.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.norm.weight is 0.0
+sparsity at layer module.head.weight is 0.0
+overal compression rate is 3.1633830279887882
+!!!! Full acc re-train masking
+ * Acc@1 72.652 Acc@5 90.144
+
+>_ Got better accuracy, saving model with top1 accuracy 72.652% now...
+
+!!!! Full acc re-train masking
+ * Acc@1 71.416 Acc@5 89.788
+!!!! Full acc re-train masking
+ * Acc@1 70.954 Acc@5 89.454
+!!!! Full acc re-train masking
+ * Acc@1 71.326 Acc@5 89.458
+!!!! Full acc re-train masking
+ * Acc@1 70.836 Acc@5 89.372
+!!!! Full acc re-train masking
+ * Acc@1 70.596 Acc@5 89.352
+!!!! Full acc re-train masking
+ * Acc@1 70.542 Acc@5 89.034
+!!!! Full acc re-train masking
+ * Acc@1 70.674 Acc@5 89.194
+!!!! Full acc re-train masking
+ * Acc@1 70.160 Acc@5 89.066
+!!!! Full acc re-train masking
+ * Acc@1 69.700 Acc@5 88.734
+---------------> After retraining
+ * Acc@1 69.700 Acc@5 88.734
+sparsity at layer module.stem.proj.weight is 0.0
+sparsity at layer module.blocks.0.norm1.weight is 0.0
+sparsity at layer module.blocks.0.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.0.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.0.norm2.weight is 0.0
+sparsity at layer module.blocks.0.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.0.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.1.norm1.weight is 0.0
+sparsity at layer module.blocks.1.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.1.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.1.norm2.weight is 0.0
+sparsity at layer module.blocks.1.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.1.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.2.norm1.weight is 0.0
+sparsity at layer module.blocks.2.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.2.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.2.norm2.weight is 0.0
+sparsity at layer module.blocks.2.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.2.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.3.norm1.weight is 0.0
+sparsity at layer module.blocks.3.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.3.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.3.norm2.weight is 0.0
+sparsity at layer module.blocks.3.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.3.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.4.norm1.weight is 0.0
+sparsity at layer module.blocks.4.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.4.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.4.norm2.weight is 0.0
+sparsity at layer module.blocks.4.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.4.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.5.norm1.weight is 0.0
+sparsity at layer module.blocks.5.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.5.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.5.norm2.weight is 0.0
+sparsity at layer module.blocks.5.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.5.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.6.norm1.weight is 0.0
+sparsity at layer module.blocks.6.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.6.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.6.norm2.weight is 0.0
+sparsity at layer module.blocks.6.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.6.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.7.norm1.weight is 0.0
+sparsity at layer module.blocks.7.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.7.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.7.norm2.weight is 0.0
+sparsity at layer module.blocks.7.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.7.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.8.norm1.weight is 0.0
+sparsity at layer module.blocks.8.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.8.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.8.norm2.weight is 0.0
+sparsity at layer module.blocks.8.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.8.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.9.norm1.weight is 0.0
+sparsity at layer module.blocks.9.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.9.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.9.norm2.weight is 0.0
+sparsity at layer module.blocks.9.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.9.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.10.norm1.weight is 0.0
+sparsity at layer module.blocks.10.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.10.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.10.norm2.weight is 0.0
+sparsity at layer module.blocks.10.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.10.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.blocks.11.norm1.weight is 0.0
+sparsity at layer module.blocks.11.mlp_tokens.fc1.weight is 0.7000026573129252
+sparsity at layer module.blocks.11.mlp_tokens.fc2.weight is 0.7000026573129252
+sparsity at layer module.blocks.11.norm2.weight is 0.0
+sparsity at layer module.blocks.11.mlp_channels.fc1.weight is 0.6999999152289497
+sparsity at layer module.blocks.11.mlp_channels.fc2.weight is 0.6999999152289497
+sparsity at layer module.norm.weight is 0.0
+sparsity at layer module.head.weight is 0.0
+overal compression rate is 3.1633830279887882
+
