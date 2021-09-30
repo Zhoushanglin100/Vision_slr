@@ -9,24 +9,18 @@
 ## [MLP-Mixer](https://arxiv.org/pdf/2105.01601.pdf)
 
 ### Available models
-![](MLP_Mixer_Model.png)
+![](model_lst/MLP_Mixer_Model.png)
 
 ### Run Savlr pruning on MLP-Mixer Model
 
-```python
-### Step 1: run admm train
-## change @config-file based on needed
-python3 main_slr.py /data/imagenet --model mixer_b16_224 --pretrained --admm-train --config-file config_mlp_0.9 --batch-size 128
-
-### Step 2: run maked retrain
-## change @config-file based on needed
-## change @admmtrain-acc based on model that get from admm-train (step 1)
-## change @ext based on previous saved model (from step 1) 
-python3 main_slr.py /data/imagenet --model mixer_b16_224 --pretrained --masked-retrain --admmtrain-acc 76.08 --config-file config_mlp_0.9 --batch-size 128 --ext _tmp3
-```
-
+- Check [run_slr.py](run_slr.sh)
 
 ---
-## [Vision Transformer](https://arxiv.org/pdf/2010.11929.pdf)
+## [Swin Transformer](https://github.com/microsoft/Swin-Transformer)
 
-TBC
+### Available models
+![](model_lst/Swin_trans_Model.png)
+
+### Run Savlr pruning on Swin Transformer Model
+
+- Check [run_slr.py](run_slr.sh)
