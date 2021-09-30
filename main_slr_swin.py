@@ -15,7 +15,7 @@ import torchvision.utils
 
 import os, time, logging, yaml
 import numpy as np
-import mlp_mixer_slr.admm_code.admm as admm
+import swin_slr.admm_code.admm as admm
 # import admm_code.admm as admm
 
 import warnings
@@ -51,7 +51,7 @@ except AttributeError:
 try:
     import wandb
     has_wandb = True
-    wandb.init(project='mlp-mixer-slr', entity='zhoushanglin100')
+    wandb.init(project='swin-slr', entity='zhoushanglin100')
 except ImportError: 
     has_wandb = False
 
@@ -70,17 +70,17 @@ parser.add_argument('-c', '--config', default='', type=str, metavar='FILE',
 parser = argparse.ArgumentParser(description='PyTorch SLR ImageNet Training')
                
 # ---------------------- arg for admm train ----------------------------------
+parser.add_argument('--arch', type=str, default='swin',
+                    help='architecture')
 parser.add_argument('--optimization', type=str, default='savlr',
                     help='optimization type: [savlr, admm]')
-parser.add_argument('--load-baseline-model', type=str, default="Baseline_NIN_model_best.pth.tar", 
-                    help='checkpoint to start from (baseline model)')
 parser.add_argument('--admm-train', action='store_true', default=False,
                     help='Choose admm training')
 parser.add_argument('--masked-retrain', action='store_true', default=False,
                     help='Choose masked retraining')
 parser.add_argument('--combine-progressive', action='store_true', default=False,
                     help='Choose combine progressive')
-parser.add_argument('--config-file', type=str, default='config_mlp_0.5', 
+parser.add_argument('--config-file', type=str, default='config_swin_0.5', 
                     help="prune config file")
 parser.add_argument('--ext', type=str, default='', 
                     help="extension for saved file")
@@ -116,7 +116,7 @@ parser.add_argument('--train-split', metavar='NAME', default='train',
                     help='dataset train split (default: train)')
 parser.add_argument('--val-split', metavar='NAME', default='validation',
                     help='dataset validation split (default: validation)')
-parser.add_argument('--model', default='mixer_b16_224', type=str, metavar='MODEL',
+parser.add_argument('--model', default='swin_tiny_patch4_window7_224', type=str, metavar='MODEL',
                     help='Name of model to train (default: "countception"')
 parser.add_argument('--pretrained', action='store_true', default=False,
                     help='Start with pretrained version of specified network (if avail)')
@@ -131,7 +131,7 @@ parser.add_argument('--num-classes', type=int, default=None, metavar='N',
 parser.add_argument('--gp', default=None, type=str, metavar='POOL',
                     help='Global pool type, one of (fast, avg, max, avgmax, avgmaxc). Model default if None.')
 parser.add_argument('--img-size', type=int, default=None, metavar='N',
-                    help='Image patch size (default: None => model default)')
+                    help='Image patch size (default: 4 => model default)')
 parser.add_argument('--input-size', default=None, nargs=3, type=int,
                     metavar='N N N', help='Input all image dimensions (d h w, e.g. --input-size 3 224 224), uses model default if empty')
 parser.add_argument('--crop-pct', default=None, type=float,
@@ -142,8 +142,8 @@ parser.add_argument('--std', type=float, nargs='+', default=None, metavar='STD',
                     help='Override std deviation of of dataset')
 parser.add_argument('--interpolation', default='', type=str, metavar='NAME',
                     help='Image resize interpolation type (overrides model)')
-parser.add_argument('-b', '--batch-size', type=int, default=128, metavar='N',
-                    help='input batch size for training (default: 256)')
+parser.add_argument('-b', '--batch-size', type=int, default=64, metavar='N',
+                    help='input batch size for training (default: 64)')
 parser.add_argument('-vb', '--validation-batch-size-multiplier', type=int, default=1, metavar='N',
                     help='ratio of validation batch size to training batch size (default: 1)')
 
@@ -245,14 +245,6 @@ parser.add_argument('--smoothing', type=float, default=0.1,
                     help='Label smoothing (default: 0.1)')
 parser.add_argument('--train-interpolation', type=str, default='random',
                     help='Training interpolation (random, bilinear, bicubic default: "random")')
-parser.add_argument('--drop', type=float, default=0.0, metavar='PCT',
-                    help='Dropout rate (default: 0.)')
-parser.add_argument('--drop-connect', type=float, default=None, metavar='PCT',
-                    help='Drop connect rate, DEPRECATED, use drop-path (default: None)')
-parser.add_argument('--drop-path', type=float, default=None, metavar='PCT',
-                    help='Drop path rate (default: None)')
-parser.add_argument('--drop-block', type=float, default=None, metavar='PCT',
-                    help='Drop block rate (default: None)')
 
 # Batch norm parameters (only works with gen_efficientnet based models currently)
 parser.add_argument('--bn-tf', action='store_true', default=False,
@@ -877,7 +869,7 @@ def main():
             #     model.cuda()
 
             ### check; Todo: modify config file
-            ADMM = admm.ADMM(args, model, "./mlp_mixer_slr/profile/" + args.config_file + ".yaml", rho=current_rho)
+            ADMM = admm.ADMM(args, model, "./" + args.arch + "_slr/profile/" + args.config_file + ".yaml", rho=current_rho)
             admm.admm_initialization(args, ADMM, model)  # intialize Z and U variables
 
             for epoch in range(1, args.epochs + 1):
@@ -920,20 +912,27 @@ def main():
                 if (best_acc1 < eval_metrics["top1"]) and (epoch != 1):
                     
                     ## remove old model
-                    old_file = "mlpmix_imagenet_{}_{}_{}_{}{}.pt".format(args.optimization, best_acc1, args.config_file, args.sparsity_type, args.ext)
-                    if os.path.exists("/data/shanglin/"+args.optimization+"_train/"+old_file):
-                        os.remove("/data/shanglin/"+args.optimization+"_train/"+old_file)
+                    old_file = "{}_imagenet_{}_{}_{}_{}{}.pt".format(args.arch, 
+                                                                     args.optimization, 
+                                                                     best_acc1, 
+                                                                     args.config_file, 
+                                                                     args.sparsity_type, 
+                                                                     args.ext)
+                    if os.path.exists("/data/shanglin/"+args.arch+"/"+args.optimization+"_train/"+old_file):
+                        os.remove("/data/shanglin/"+args.arch+"/"+args.optimization+"_train/"+old_file)
 
                     ### save new one
                     best_acc1 = max(eval_metrics["top1"], best_acc1)
                     model_best = model
                     torch.save(model_best.state_dict(), 
-                                "/data/shanglin/{}_train/mlpmix_imagenet_{}_{}_{}_{}{}.pt".format(args.optimization, 
-                                                                                                    args.optimization, 
-                                                                                                    best_acc1, 
-                                                                                                    args.config_file, 
-                                                                                                    args.sparsity_type,
-                                                                                                    args.ext))
+                                "/data/shanglin/{}/{}_train/{}_imagenet_{}_{}_{}_{}{}.pt".format(args.arch,
+                                                                                                 args.optimization, 
+                                                                                                 args.arch,
+                                                                                                 args.optimization, 
+                                                                                                 best_acc1, 
+                                                                                                 args.config_file, 
+                                                                                                 args.sparsity_type,
+                                                                                                 args.ext))
                 ### save proper checkpoint with eval metric
                 ### check; Todo: modify save checkpoint
                 if (saver is not None) and (epoch != 1):
@@ -963,15 +962,16 @@ def main():
                     print("Condition 2")
                     print(ADMM.condition2)
             
-            dir_save = "mlp_mixer_slr/"+args.optimization+"_model/admm_train/"
+            dir_save = args.arch+"_slr/"+args.optimization+"_model/admm_train/"
             if not os.path.exists(dir_save):
                 os.makedirs(dir_save)
             torch.save(model_best.state_dict(), 
-                        dir_save+"mlpmix_imagenet_{}_{}_{}_{}{}.pt".format(args.optimization,
-                                                                            best_acc1, 
-                                                                            args.config_file, 
-                                                                            args.sparsity_type,
-                                                                            args.ext))
+                        dir_save+"{}_imagenet_{}_{}_{}_{}{}.pt".format(args.arch,
+                                                                        args.optimization,
+                                                                        best_acc1, 
+                                                                        args.config_file, 
+                                                                        args.sparsity_type,
+                                                                        args.ext))
 
             if best_metric is not None:
                 _logger.info('*** Best metric: {0} (epoch {1})'.format(best_metric, best_epoch))
@@ -993,15 +993,16 @@ def main():
             #     best_metric, best_epoch = saver.save_checkpoint(epoch, metric=save_metric)
 
             ### Todo: save hardprune model
-            hp_dir = "mlp_mixer_slr/"+args.optimization+"_model/hardprune/"
+            hp_dir = args.arch+"_slr/"+args.optimization+"_model/hardprune/"
             if not os.path.exists(hp_dir):
                 os.makedirs(hp_dir)
             torch.save(model_forhard.state_dict(), 
-                       hp_dir+"mlpmix_imagenet_{}_{}_{}_{}{}.pt".format(args.optimization,
-                                                                        eval_metrics_hp['top1'], 
-                                                                        args.config_file, 
-                                                                        args.sparsity_type,
-                                                                        args.ext))
+                       hp_dir+"{}_imagenet_{}_{}_{}_{}{}.pt".format(args.arch, 
+                                                                    args.optimization,
+                                                                    eval_metrics_hp['top1'], 
+                                                                    args.config_file, 
+                                                                    args.sparsity_type,
+                                                                    args.ext))
     
     """================"""
     """End ADMM retrain"""
@@ -1023,7 +1024,7 @@ def main():
         saver = None
         output_dir = None
 
-        output_dir = '/data/shanglin/'+args.optimization+'_retrain/timm_retrain'
+        output_dir = '/data/shanglin/'+args.arch+'/'+args.optimization+'_retrain/timm_retrain'
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
         decreasing = True if eval_metric == 'loss' else False
@@ -1036,12 +1037,14 @@ def main():
                                 max_history=args.checkpoint_hist)
 
         print("\n---------------> Loading admm trained file...")
-        filename_slr = "mlp_mixer_slr/{}_model/admm_train/mlpmix_imagenet_{}_{}_{}_{}{}.pt".format(args.optimization,
-                                                                                                    args.optimization, 
-                                                                                                    args.admmtrain_acc, 
-                                                                                                    args.config_file, 
-                                                                                                    args.sparsity_type,
-                                                                                                    args.ext)
+        filename_slr = "{}_slr/{}_model/admm_train/{}_imagenet_{}_{}_{}_{}{}.pt".format(args.arch,
+                                                                                        args.optimization,
+                                                                                        args.arch,
+                                                                                        args.optimization, 
+                                                                                        args.admmtrain_acc, 
+                                                                                        args.config_file, 
+                                                                                        args.sparsity_type,
+                                                                                        args.ext)
         # filename_slr = "mlp_mixer_slr/savlr_model/hardprune/mlpmix_imagenet_54.816_config_mlp_0.9_irregular_tmp2_1.pt"
         print("!!! Loaded File: ", filename_slr)
         
@@ -1049,7 +1052,7 @@ def main():
         load_checkpoint(model, filename_slr)
         model.cuda()
 
-        ADMM = admm.ADMM(args, model, "./mlp_mixer_slr/profile/" + args.config_file + ".yaml", rho=args.rho)
+        ADMM = admm.ADMM(args, model, "./"+args.arch+"_slr/profile/" + args.config_file + ".yaml", rho=args.rho)
 
         ### check; Todo: modify validation
         print("\n---------------> Accuracy before hardpruning")
@@ -1114,35 +1117,43 @@ def main():
             if best_acc1 < eval_metrics_rt["top1"]:
 
                 ## remove old model
-                old_file_rt = "mlpmix_imagenet_{}_{}_{}_{}{}.pt".format(args.optimization, best_acc1, args.config_file, args.sparsity_type, args.ext)
-                if os.path.exists("/data/shanglin/"+args.optimization+"_retrain/"+old_file_rt):
-                    os.remove("/data/shanglin/"+args.optimization+"_retrain/"+old_file_rt)
+                old_file_rt = "{}_imagenet_{}_{}_{}_{}{}.pt".format(args.arch, 
+                                                                    args.optimization, 
+                                                                    best_acc1, 
+                                                                    args.config_file, 
+                                                                    args.sparsity_type, 
+                                                                    args.ext)
+                if os.path.exists("/data/shanglin/"+args.arch+"/"+args.optimization+"_retrain/"+old_file_rt):
+                    os.remove("/data/shanglin/"+args.arch+"/"+args.optimization+"_retrain/"+old_file_rt)
 
                 ### save new one
                 best_acc1 = max(eval_metrics_rt["top1"], best_acc1)
                 model_best_retrain = model
                 print("\n>_ Got better accuracy, saving model with top1 accuracy {:.3f}% now...\n".format(best_acc1))
                 torch.save(model_best_retrain.state_dict(), 
-                            "/data/shanglin/{}_retrain/mlpmix_imagenet_retrained_acc_{:.3f}_{}_{}{}.pt".format(args.optimization, 
-                                                                                                                 best_acc1, 
-                                                                                                                 args.config_file, 
-                                                                                                                 args.sparsity_type,
-                                                                                                                 args.ext))
+                            "/data/shanglin/{}/{}_retrain/{}_imagenet_retrained_acc_{:.3f}_{}_{}{}.pt".format(args.arch,
+                                                                                                              args.optimization,
+                                                                                                              args.arch,
+                                                                                                              best_acc1, 
+                                                                                                              args.config_file, 
+                                                                                                              args.sparsity_type,
+                                                                                                              args.ext))
             ### check; Todo: modify save checkpoint
             if saver is not None:
                 save_metric = eval_metrics_rt[eval_metric]
                 best_metric, best_epoch = saver.save_checkpoint(epoch, metric=save_metric)
 
 
-        dir_save = "mlp_mixer_slr/"+args.optimization+"_model/retrain/"
+        dir_save = args.arch+"_slr/"+args.optimization+"_model/retrain/"
         if not os.path.exists(dir_save):
             os.makedirs(dir_save)
         torch.save(model_best_retrain.state_dict(), 
-                    dir_save+"mlpmix_imagenet_{}_{}_{}_{}{}.pt".format(args.optimization,
-                                                                        best_acc1, 
-                                                                        args.config_file, 
-                                                                        args.sparsity_type,
-                                                                        args.ext))
+                    dir_save+"{}_imagenet_{}_{}_{}_{}{}.pt".format(args.arch,
+                                                                    args.optimization,
+                                                                    best_acc1, 
+                                                                    args.config_file, 
+                                                                    args.sparsity_type,
+                                                                    args.ext))
         print("---------------> After retraining")
         eval_metrics_final = validate(model_best_retrain, loader_eval, 
                                         validate_loss_fn, args, 

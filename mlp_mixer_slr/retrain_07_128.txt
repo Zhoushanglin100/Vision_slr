@@ -111,82 +111,102 @@ overal compression rate is 3.1633830279887882
  * Acc@1 70.160 Acc@5 89.066
 !!!! Full acc re-train masking
  * Acc@1 69.700 Acc@5 88.734
----------------> After retraining
- * Acc@1 69.700 Acc@5 88.734
-sparsity at layer module.stem.proj.weight is 0.0
-sparsity at layer module.blocks.0.norm1.weight is 0.0
-sparsity at layer module.blocks.0.mlp_tokens.fc1.weight is 0.7000026573129252
-sparsity at layer module.blocks.0.mlp_tokens.fc2.weight is 0.7000026573129252
-sparsity at layer module.blocks.0.norm2.weight is 0.0
-sparsity at layer module.blocks.0.mlp_channels.fc1.weight is 0.6999999152289497
-sparsity at layer module.blocks.0.mlp_channels.fc2.weight is 0.6999999152289497
-sparsity at layer module.blocks.1.norm1.weight is 0.0
-sparsity at layer module.blocks.1.mlp_tokens.fc1.weight is 0.7000026573129252
-sparsity at layer module.blocks.1.mlp_tokens.fc2.weight is 0.7000026573129252
-sparsity at layer module.blocks.1.norm2.weight is 0.0
-sparsity at layer module.blocks.1.mlp_channels.fc1.weight is 0.6999999152289497
-sparsity at layer module.blocks.1.mlp_channels.fc2.weight is 0.6999999152289497
-sparsity at layer module.blocks.2.norm1.weight is 0.0
-sparsity at layer module.blocks.2.mlp_tokens.fc1.weight is 0.7000026573129252
-sparsity at layer module.blocks.2.mlp_tokens.fc2.weight is 0.7000026573129252
-sparsity at layer module.blocks.2.norm2.weight is 0.0
-sparsity at layer module.blocks.2.mlp_channels.fc1.weight is 0.6999999152289497
-sparsity at layer module.blocks.2.mlp_channels.fc2.weight is 0.6999999152289497
-sparsity at layer module.blocks.3.norm1.weight is 0.0
-sparsity at layer module.blocks.3.mlp_tokens.fc1.weight is 0.7000026573129252
-sparsity at layer module.blocks.3.mlp_tokens.fc2.weight is 0.7000026573129252
-sparsity at layer module.blocks.3.norm2.weight is 0.0
-sparsity at layer module.blocks.3.mlp_channels.fc1.weight is 0.6999999152289497
-sparsity at layer module.blocks.3.mlp_channels.fc2.weight is 0.6999999152289497
-sparsity at layer module.blocks.4.norm1.weight is 0.0
-sparsity at layer module.blocks.4.mlp_tokens.fc1.weight is 0.7000026573129252
-sparsity at layer module.blocks.4.mlp_tokens.fc2.weight is 0.7000026573129252
-sparsity at layer module.blocks.4.norm2.weight is 0.0
-sparsity at layer module.blocks.4.mlp_channels.fc1.weight is 0.6999999152289497
-sparsity at layer module.blocks.4.mlp_channels.fc2.weight is 0.6999999152289497
-sparsity at layer module.blocks.5.norm1.weight is 0.0
-sparsity at layer module.blocks.5.mlp_tokens.fc1.weight is 0.7000026573129252
-sparsity at layer module.blocks.5.mlp_tokens.fc2.weight is 0.7000026573129252
-sparsity at layer module.blocks.5.norm2.weight is 0.0
-sparsity at layer module.blocks.5.mlp_channels.fc1.weight is 0.6999999152289497
-sparsity at layer module.blocks.5.mlp_channels.fc2.weight is 0.6999999152289497
-sparsity at layer module.blocks.6.norm1.weight is 0.0
-sparsity at layer module.blocks.6.mlp_tokens.fc1.weight is 0.7000026573129252
-sparsity at layer module.blocks.6.mlp_tokens.fc2.weight is 0.7000026573129252
-sparsity at layer module.blocks.6.norm2.weight is 0.0
-sparsity at layer module.blocks.6.mlp_channels.fc1.weight is 0.6999999152289497
-sparsity at layer module.blocks.6.mlp_channels.fc2.weight is 0.6999999152289497
-sparsity at layer module.blocks.7.norm1.weight is 0.0
-sparsity at layer module.blocks.7.mlp_tokens.fc1.weight is 0.7000026573129252
-sparsity at layer module.blocks.7.mlp_tokens.fc2.weight is 0.7000026573129252
-sparsity at layer module.blocks.7.norm2.weight is 0.0
-sparsity at layer module.blocks.7.mlp_channels.fc1.weight is 0.6999999152289497
-sparsity at layer module.blocks.7.mlp_channels.fc2.weight is 0.6999999152289497
-sparsity at layer module.blocks.8.norm1.weight is 0.0
-sparsity at layer module.blocks.8.mlp_tokens.fc1.weight is 0.7000026573129252
-sparsity at layer module.blocks.8.mlp_tokens.fc2.weight is 0.7000026573129252
-sparsity at layer module.blocks.8.norm2.weight is 0.0
-sparsity at layer module.blocks.8.mlp_channels.fc1.weight is 0.6999999152289497
-sparsity at layer module.blocks.8.mlp_channels.fc2.weight is 0.6999999152289497
-sparsity at layer module.blocks.9.norm1.weight is 0.0
-sparsity at layer module.blocks.9.mlp_tokens.fc1.weight is 0.7000026573129252
-sparsity at layer module.blocks.9.mlp_tokens.fc2.weight is 0.7000026573129252
-sparsity at layer module.blocks.9.norm2.weight is 0.0
-sparsity at layer module.blocks.9.mlp_channels.fc1.weight is 0.6999999152289497
-sparsity at layer module.blocks.9.mlp_channels.fc2.weight is 0.6999999152289497
-sparsity at layer module.blocks.10.norm1.weight is 0.0
-sparsity at layer module.blocks.10.mlp_tokens.fc1.weight is 0.7000026573129252
-sparsity at layer module.blocks.10.mlp_tokens.fc2.weight is 0.7000026573129252
-sparsity at layer module.blocks.10.norm2.weight is 0.0
-sparsity at layer module.blocks.10.mlp_channels.fc1.weight is 0.6999999152289497
-sparsity at layer module.blocks.10.mlp_channels.fc2.weight is 0.6999999152289497
-sparsity at layer module.blocks.11.norm1.weight is 0.0
-sparsity at layer module.blocks.11.mlp_tokens.fc1.weight is 0.7000026573129252
-sparsity at layer module.blocks.11.mlp_tokens.fc2.weight is 0.7000026573129252
-sparsity at layer module.blocks.11.norm2.weight is 0.0
-sparsity at layer module.blocks.11.mlp_channels.fc1.weight is 0.6999999152289497
-sparsity at layer module.blocks.11.mlp_channels.fc2.weight is 0.6999999152289497
-sparsity at layer module.norm.weight is 0.0
-sparsity at layer module.head.weight is 0.0
-overal compression rate is 3.1633830279887882
+!!!! Full acc re-train masking
+ * Acc@1 69.408 Acc@5 88.762
+!!!! Full acc re-train masking
+ * Acc@1 69.614 Acc@5 88.866
+!!!! Full acc re-train masking
+ * Acc@1 69.094 Acc@5 88.380
+!!!! Full acc re-train masking
+ * Acc@1 69.026 Acc@5 88.464
+!!!! Full acc re-train masking
+ * Acc@1 68.908 Acc@5 88.528
+!!!! Full acc re-train masking
+ * Acc@1 68.818 Acc@5 88.568
+!!!! Full acc re-train masking
+ * Acc@1 68.644 Acc@5 88.334
+!!!! Full acc re-train masking
+ * Acc@1 68.802 Acc@5 88.402
+!!!! Full acc re-train masking
+ * Acc@1 68.946 Acc@5 88.312
+!!!! Full acc re-train masking
+ * Acc@1 68.878 Acc@5 88.524
+!!!! Full acc re-train masking
+ * Acc@1 68.944 Acc@5 88.528
+!!!! Full acc re-train masking
+ * Acc@1 69.068 Acc@5 88.436
+!!!! Full acc re-train masking
+ * Acc@1 68.796 Acc@5 88.266
+!!!! Full acc re-train masking
+ * Acc@1 68.900 Acc@5 88.362
+!!!! Full acc re-train masking
+ * Acc@1 68.924 Acc@5 88.398
+!!!! Full acc re-train masking
+ * Acc@1 68.992 Acc@5 88.440
+!!!! Full acc re-train masking
+ * Acc@1 68.964 Acc@5 88.382
+!!!! Full acc re-train masking
+ * Acc@1 68.896 Acc@5 88.468
+!!!! Full acc re-train masking
+ * Acc@1 68.642 Acc@5 88.230
+!!!! Full acc re-train masking
+ * Acc@1 72.858 Acc@5 90.286
+
+>_ Got better accuracy, saving model with top1 accuracy 72.858% now...
+
+!!!! Full acc re-train masking
+ * Acc@1 73.048 Acc@5 90.504
+
+>_ Got better accuracy, saving model with top1 accuracy 73.048% now...
+
+!!!! Full acc re-train masking
+ * Acc@1 73.344 Acc@5 90.616
+
+>_ Got better accuracy, saving model with top1 accuracy 73.344% now...
+
+!!!! Full acc re-train masking
+ * Acc@1 73.436 Acc@5 90.750
+
+>_ Got better accuracy, saving model with top1 accuracy 73.436% now...
+
+!!!! Full acc re-train masking
+ * Acc@1 73.330 Acc@5 90.500
+!!!! Full acc re-train masking
+ * Acc@1 73.470 Acc@5 90.528
+
+>_ Got better accuracy, saving model with top1 accuracy 73.470% now...
+
+!!!! Full acc re-train masking
+ * Acc@1 73.560 Acc@5 90.652
+
+>_ Got better accuracy, saving model with top1 accuracy 73.560% now...
+
+!!!! Full acc re-train masking
+ * Acc@1 73.436 Acc@5 90.516
+!!!! Full acc re-train masking
+ * Acc@1 73.458 Acc@5 90.550
+!!!! Full acc re-train masking
+ * Acc@1 73.372 Acc@5 90.472
+!!!! Full acc re-train masking
+ * Acc@1 73.086 Acc@5 90.468
+!!!! Full acc re-train masking
+ * Acc@1 73.330 Acc@5 90.528
+!!!! Full acc re-train masking
+ * Acc@1 73.070 Acc@5 90.424
+!!!! Full acc re-train masking
+ * Acc@1 73.082 Acc@5 90.258
+!!!! Full acc re-train masking
+ * Acc@1 72.976 Acc@5 90.232
+!!!! Full acc re-train masking
+ * Acc@1 73.110 Acc@5 90.338
+!!!! Full acc re-train masking
+ * Acc@1 72.636 Acc@5 90.032
+!!!! Full acc re-train masking
+ * Acc@1 72.802 Acc@5 90.180
+!!!! Full acc re-train masking
+ * Acc@1 73.006 Acc@5 90.238
+!!!! Full acc re-train masking
+ * Acc@1 72.704 Acc@5 90.260
+!!!! Full acc re-train masking
+ * Acc@1 72.656 Acc@5 90.014
 

@@ -4,14 +4,14 @@ AMP not enabled. Training in float32.
 !!!!!!!!!!!!!!!!!!! RETRAIN !!!!!!!!!!!!!!!!!
 
 ---------------> Loading admm trained file...
-!!! Loaded File:  mlp_mixer_slr/admm_model/admm_train/mlpmix_imagenet_75.374_config_mlp_0.5_irregular_tmp3.pt
+!!! Loaded File:  mlp_mixer_slr/admm_model/admm_train/mlpmix_imagenet_admm_75.434_config_mlp_0.5_irregular_tmp1.pt
 
 ---------------> Accuracy before hardpruning
- * Acc@1 75.312 Acc@5 91.656
+ * Acc@1 75.416 Acc@5 91.736
 
 ---------------> Accuracy after hard-pruning
 hard pruning
- * Acc@1 75.312 Acc@5 91.656
+ * Acc@1 75.416 Acc@5 91.736
 sparsity at layer module.stem.proj.weight is 0.0
 sparsity at layer module.blocks.0.norm1.weight is 0.0
 sparsity at layer module.blocks.0.mlp_tokens.fc1.weight is 0.5
@@ -89,23 +89,23 @@ sparsity at layer module.norm.weight is 0.0
 sparsity at layer module.head.weight is 0.0
 overal compression rate is 1.954987071021515
 !!!! Full acc re-train masking
- * Acc@1 75.296 Acc@5 91.686
+ * Acc@1 75.332 Acc@5 91.712
 !!!! Full acc re-train masking
- * Acc@1 73.684 Acc@5 90.792
+ * Acc@1 73.564 Acc@5 90.752
 !!!! Full acc re-train masking
- * Acc@1 72.462 Acc@5 90.342
+ * Acc@1 72.464 Acc@5 90.234
 !!!! Full acc re-train masking
- * Acc@1 72.354 Acc@5 90.108
+ * Acc@1 71.922 Acc@5 89.794
 !!!! Full acc re-train masking
- * Acc@1 71.408 Acc@5 89.644
+ * Acc@1 71.304 Acc@5 89.740
 !!!! Full acc re-train masking
- * Acc@1 71.398 Acc@5 89.668
+ * Acc@1 71.206 Acc@5 89.648
 !!!! Full acc re-train masking
- * Acc@1 70.964 Acc@5 89.404
+ * Acc@1 70.834 Acc@5 89.128
 !!!! Full acc re-train masking
- * Acc@1 70.720 Acc@5 89.238
+ * Acc@1 70.394 Acc@5 88.946
 !!!! Full acc re-train masking
- * Acc@1 70.036 Acc@5 88.628
+ * Acc@1 70.052 Acc@5 89.028
 !!!! Full acc re-train masking
- * Acc@1 69.354 Acc@5 88.602
+ * Acc@1 69.894 Acc@5 88.774
 

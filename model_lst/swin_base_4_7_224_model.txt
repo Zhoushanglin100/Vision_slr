@@ -1,0 +1,433 @@
+||||||||||| Model Stru |||||||||||
+module.patch_embed.proj.weight
+module.layers.0.blocks.0.attn.qkv.weight
+module.layers.0.blocks.0.attn.proj.weight
+module.layers.0.blocks.0.mlp.fc1.weight
+module.layers.0.blocks.0.mlp.fc2.weight
+module.layers.0.blocks.1.attn.qkv.weight
+module.layers.0.blocks.1.attn.proj.weight
+module.layers.0.blocks.1.mlp.fc1.weight
+module.layers.0.blocks.1.mlp.fc2.weight
+module.layers.0.downsample.reduction.weight
+module.layers.1.blocks.0.attn.qkv.weight
+module.layers.1.blocks.0.attn.proj.weight
+module.layers.1.blocks.0.mlp.fc1.weight
+module.layers.1.blocks.0.mlp.fc2.weight
+module.layers.1.blocks.1.attn.qkv.weight
+module.layers.1.blocks.1.attn.proj.weight
+module.layers.1.blocks.1.mlp.fc1.weight
+module.layers.1.blocks.1.mlp.fc2.weight
+module.layers.1.downsample.reduction.weight
+module.layers.2.blocks.0.attn.qkv.weight
+module.layers.2.blocks.0.attn.proj.weight
+module.layers.2.blocks.0.mlp.fc1.weight
+module.layers.2.blocks.0.mlp.fc2.weight
+module.layers.2.blocks.1.attn.qkv.weight
+module.layers.2.blocks.1.attn.proj.weight
+module.layers.2.blocks.1.mlp.fc1.weight
+module.layers.2.blocks.1.mlp.fc2.weight
+module.layers.2.blocks.2.attn.qkv.weight
+module.layers.2.blocks.2.attn.proj.weight
+module.layers.2.blocks.2.mlp.fc1.weight
+module.layers.2.blocks.2.mlp.fc2.weight
+module.layers.2.blocks.3.attn.qkv.weight
+module.layers.2.blocks.3.attn.proj.weight
+module.layers.2.blocks.3.mlp.fc1.weight
+module.layers.2.blocks.3.mlp.fc2.weight
+module.layers.2.blocks.4.attn.qkv.weight
+module.layers.2.blocks.4.attn.proj.weight
+module.layers.2.blocks.4.mlp.fc1.weight
+module.layers.2.blocks.4.mlp.fc2.weight
+module.layers.2.blocks.5.attn.qkv.weight
+module.layers.2.blocks.5.attn.proj.weight
+module.layers.2.blocks.5.mlp.fc1.weight
+module.layers.2.blocks.5.mlp.fc2.weight
+module.layers.2.blocks.6.attn.qkv.weight
+module.layers.2.blocks.6.attn.proj.weight
+module.layers.2.blocks.6.mlp.fc1.weight
+module.layers.2.blocks.6.mlp.fc2.weight
+module.layers.2.blocks.7.attn.qkv.weight
+module.layers.2.blocks.7.attn.proj.weight
+module.layers.2.blocks.7.mlp.fc1.weight
+module.layers.2.blocks.7.mlp.fc2.weight
+module.layers.2.blocks.8.attn.qkv.weight
+module.layers.2.blocks.8.attn.proj.weight
+module.layers.2.blocks.8.mlp.fc1.weight
+module.layers.2.blocks.8.mlp.fc2.weight
+module.layers.2.blocks.9.attn.qkv.weight
+module.layers.2.blocks.9.attn.proj.weight
+module.layers.2.blocks.9.mlp.fc1.weight
+module.layers.2.blocks.9.mlp.fc2.weight
+module.layers.2.blocks.10.attn.qkv.weight
+module.layers.2.blocks.10.attn.proj.weight
+module.layers.2.blocks.10.mlp.fc1.weight
+module.layers.2.blocks.10.mlp.fc2.weight
+module.layers.2.blocks.11.attn.qkv.weight
+module.layers.2.blocks.11.attn.proj.weight
+module.layers.2.blocks.11.mlp.fc1.weight
+module.layers.2.blocks.11.mlp.fc2.weight
+module.layers.2.blocks.12.attn.qkv.weight
+module.layers.2.blocks.12.attn.proj.weight
+module.layers.2.blocks.12.mlp.fc1.weight
+module.layers.2.blocks.12.mlp.fc2.weight
+module.layers.2.blocks.13.attn.qkv.weight
+module.layers.2.blocks.13.attn.proj.weight
+module.layers.2.blocks.13.mlp.fc1.weight
+module.layers.2.blocks.13.mlp.fc2.weight
+module.layers.2.blocks.14.attn.qkv.weight
+module.layers.2.blocks.14.attn.proj.weight
+module.layers.2.blocks.14.mlp.fc1.weight
+module.layers.2.blocks.14.mlp.fc2.weight
+module.layers.2.blocks.15.attn.qkv.weight
+module.layers.2.blocks.15.attn.proj.weight
+module.layers.2.blocks.15.mlp.fc1.weight
+module.layers.2.blocks.15.mlp.fc2.weight
+module.layers.2.blocks.16.attn.qkv.weight
+module.layers.2.blocks.16.attn.proj.weight
+module.layers.2.blocks.16.mlp.fc1.weight
+module.layers.2.blocks.16.mlp.fc2.weight
+module.layers.2.blocks.17.attn.qkv.weight
+module.layers.2.blocks.17.attn.proj.weight
+module.layers.2.blocks.17.mlp.fc1.weight
+module.layers.2.blocks.17.mlp.fc2.weight
+module.layers.2.downsample.reduction.weight
+module.layers.3.blocks.0.attn.qkv.weight
+module.layers.3.blocks.0.attn.proj.weight
+module.layers.3.blocks.0.mlp.fc1.weight
+module.layers.3.blocks.0.mlp.fc2.weight
+module.layers.3.blocks.1.attn.qkv.weight
+module.layers.3.blocks.1.attn.proj.weight
+module.layers.3.blocks.1.mlp.fc1.weight
+module.layers.3.blocks.1.mlp.fc2.weight
+module.head.weight
+0 th weight: module.patch_embed.proj.weight , shape =  torch.Size([128, 3, 4, 4]) , weight.dtype =  torch.float32
+1 th weight: module.patch_embed.proj.bias , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+2 th weight: module.patch_embed.norm.weight , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+3 th weight: module.patch_embed.norm.bias , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+4 th weight: module.layers.0.blocks.0.norm1.weight , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+5 th weight: module.layers.0.blocks.0.norm1.bias , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+6 th weight: module.layers.0.blocks.0.attn.relative_position_bias_table , shape =  torch.Size([169, 4]) , weight.dtype =  torch.float32
+7 th weight: module.layers.0.blocks.0.attn.qkv.weight , shape =  torch.Size([384, 128]) , weight.dtype =  torch.float32
+8 th weight: module.layers.0.blocks.0.attn.qkv.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+9 th weight: module.layers.0.blocks.0.attn.proj.weight , shape =  torch.Size([128, 128]) , weight.dtype =  torch.float32
+10 th weight: module.layers.0.blocks.0.attn.proj.bias , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+11 th weight: module.layers.0.blocks.0.norm2.weight , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+12 th weight: module.layers.0.blocks.0.norm2.bias , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+13 th weight: module.layers.0.blocks.0.mlp.fc1.weight , shape =  torch.Size([512, 128]) , weight.dtype =  torch.float32
+14 th weight: module.layers.0.blocks.0.mlp.fc1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+15 th weight: module.layers.0.blocks.0.mlp.fc2.weight , shape =  torch.Size([128, 512]) , weight.dtype =  torch.float32
+16 th weight: module.layers.0.blocks.0.mlp.fc2.bias , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+17 th weight: module.layers.0.blocks.1.norm1.weight , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+18 th weight: module.layers.0.blocks.1.norm1.bias , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+19 th weight: module.layers.0.blocks.1.attn.relative_position_bias_table , shape =  torch.Size([169, 4]) , weight.dtype =  torch.float32
+20 th weight: module.layers.0.blocks.1.attn.qkv.weight , shape =  torch.Size([384, 128]) , weight.dtype =  torch.float32
+21 th weight: module.layers.0.blocks.1.attn.qkv.bias , shape =  torch.Size([384]) , weight.dtype =  torch.float32
+22 th weight: module.layers.0.blocks.1.attn.proj.weight , shape =  torch.Size([128, 128]) , weight.dtype =  torch.float32
+23 th weight: module.layers.0.blocks.1.attn.proj.bias , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+24 th weight: module.layers.0.blocks.1.norm2.weight , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+25 th weight: module.layers.0.blocks.1.norm2.bias , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+26 th weight: module.layers.0.blocks.1.mlp.fc1.weight , shape =  torch.Size([512, 128]) , weight.dtype =  torch.float32
+27 th weight: module.layers.0.blocks.1.mlp.fc1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+28 th weight: module.layers.0.blocks.1.mlp.fc2.weight , shape =  torch.Size([128, 512]) , weight.dtype =  torch.float32
+29 th weight: module.layers.0.blocks.1.mlp.fc2.bias , shape =  torch.Size([128]) , weight.dtype =  torch.float32
+30 th weight: module.layers.0.downsample.reduction.weight , shape =  torch.Size([256, 512]) , weight.dtype =  torch.float32
+31 th weight: module.layers.0.downsample.norm.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+32 th weight: module.layers.0.downsample.norm.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+33 th weight: module.layers.1.blocks.0.norm1.weight , shape =  torch.Size([256]) , weight.dtype =  torch.float32
+34 th weight: module.layers.1.blocks.0.norm1.bias , shape =  torch.Size([256]) , weight.dtype =  torch.float32
+35 th weight: module.layers.1.blocks.0.attn.relative_position_bias_table , shape =  torch.Size([169, 8]) , weight.dtype =  torch.float32
+36 th weight: module.layers.1.blocks.0.attn.qkv.weight , shape =  torch.Size([768, 256]) , weight.dtype =  torch.float32
+37 th weight: module.layers.1.blocks.0.attn.qkv.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+38 th weight: module.layers.1.blocks.0.attn.proj.weight , shape =  torch.Size([256, 256]) , weight.dtype =  torch.float32
+39 th weight: module.layers.1.blocks.0.attn.proj.bias , shape =  torch.Size([256]) , weight.dtype =  torch.float32
+40 th weight: module.layers.1.blocks.0.norm2.weight , shape =  torch.Size([256]) , weight.dtype =  torch.float32
+41 th weight: module.layers.1.blocks.0.norm2.bias , shape =  torch.Size([256]) , weight.dtype =  torch.float32
+42 th weight: module.layers.1.blocks.0.mlp.fc1.weight , shape =  torch.Size([1024, 256]) , weight.dtype =  torch.float32
+43 th weight: module.layers.1.blocks.0.mlp.fc1.bias , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+44 th weight: module.layers.1.blocks.0.mlp.fc2.weight , shape =  torch.Size([256, 1024]) , weight.dtype =  torch.float32
+45 th weight: module.layers.1.blocks.0.mlp.fc2.bias , shape =  torch.Size([256]) , weight.dtype =  torch.float32
+46 th weight: module.layers.1.blocks.1.norm1.weight , shape =  torch.Size([256]) , weight.dtype =  torch.float32
+47 th weight: module.layers.1.blocks.1.norm1.bias , shape =  torch.Size([256]) , weight.dtype =  torch.float32
+48 th weight: module.layers.1.blocks.1.attn.relative_position_bias_table , shape =  torch.Size([169, 8]) , weight.dtype =  torch.float32
+49 th weight: module.layers.1.blocks.1.attn.qkv.weight , shape =  torch.Size([768, 256]) , weight.dtype =  torch.float32
+50 th weight: module.layers.1.blocks.1.attn.qkv.bias , shape =  torch.Size([768]) , weight.dtype =  torch.float32
+51 th weight: module.layers.1.blocks.1.attn.proj.weight , shape =  torch.Size([256, 256]) , weight.dtype =  torch.float32
+52 th weight: module.layers.1.blocks.1.attn.proj.bias , shape =  torch.Size([256]) , weight.dtype =  torch.float32
+53 th weight: module.layers.1.blocks.1.norm2.weight , shape =  torch.Size([256]) , weight.dtype =  torch.float32
+54 th weight: module.layers.1.blocks.1.norm2.bias , shape =  torch.Size([256]) , weight.dtype =  torch.float32
+55 th weight: module.layers.1.blocks.1.mlp.fc1.weight , shape =  torch.Size([1024, 256]) , weight.dtype =  torch.float32
+56 th weight: module.layers.1.blocks.1.mlp.fc1.bias , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+57 th weight: module.layers.1.blocks.1.mlp.fc2.weight , shape =  torch.Size([256, 1024]) , weight.dtype =  torch.float32
+58 th weight: module.layers.1.blocks.1.mlp.fc2.bias , shape =  torch.Size([256]) , weight.dtype =  torch.float32
+59 th weight: module.layers.1.downsample.reduction.weight , shape =  torch.Size([512, 1024]) , weight.dtype =  torch.float32
+60 th weight: module.layers.1.downsample.norm.weight , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+61 th weight: module.layers.1.downsample.norm.bias , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+62 th weight: module.layers.2.blocks.0.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+63 th weight: module.layers.2.blocks.0.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+64 th weight: module.layers.2.blocks.0.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+65 th weight: module.layers.2.blocks.0.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+66 th weight: module.layers.2.blocks.0.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+67 th weight: module.layers.2.blocks.0.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+68 th weight: module.layers.2.blocks.0.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+69 th weight: module.layers.2.blocks.0.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+70 th weight: module.layers.2.blocks.0.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+71 th weight: module.layers.2.blocks.0.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+72 th weight: module.layers.2.blocks.0.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+73 th weight: module.layers.2.blocks.0.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+74 th weight: module.layers.2.blocks.0.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+75 th weight: module.layers.2.blocks.1.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+76 th weight: module.layers.2.blocks.1.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+77 th weight: module.layers.2.blocks.1.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+78 th weight: module.layers.2.blocks.1.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+79 th weight: module.layers.2.blocks.1.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+80 th weight: module.layers.2.blocks.1.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+81 th weight: module.layers.2.blocks.1.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+82 th weight: module.layers.2.blocks.1.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+83 th weight: module.layers.2.blocks.1.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+84 th weight: module.layers.2.blocks.1.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+85 th weight: module.layers.2.blocks.1.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+86 th weight: module.layers.2.blocks.1.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+87 th weight: module.layers.2.blocks.1.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+88 th weight: module.layers.2.blocks.2.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+89 th weight: module.layers.2.blocks.2.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+90 th weight: module.layers.2.blocks.2.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+91 th weight: module.layers.2.blocks.2.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+92 th weight: module.layers.2.blocks.2.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+93 th weight: module.layers.2.blocks.2.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+94 th weight: module.layers.2.blocks.2.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+95 th weight: module.layers.2.blocks.2.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+96 th weight: module.layers.2.blocks.2.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+97 th weight: module.layers.2.blocks.2.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+98 th weight: module.layers.2.blocks.2.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+99 th weight: module.layers.2.blocks.2.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+100 th weight: module.layers.2.blocks.2.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+101 th weight: module.layers.2.blocks.3.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+102 th weight: module.layers.2.blocks.3.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+103 th weight: module.layers.2.blocks.3.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+104 th weight: module.layers.2.blocks.3.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+105 th weight: module.layers.2.blocks.3.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+106 th weight: module.layers.2.blocks.3.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+107 th weight: module.layers.2.blocks.3.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+108 th weight: module.layers.2.blocks.3.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+109 th weight: module.layers.2.blocks.3.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+110 th weight: module.layers.2.blocks.3.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+111 th weight: module.layers.2.blocks.3.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+112 th weight: module.layers.2.blocks.3.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+113 th weight: module.layers.2.blocks.3.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+114 th weight: module.layers.2.blocks.4.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+115 th weight: module.layers.2.blocks.4.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+116 th weight: module.layers.2.blocks.4.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+117 th weight: module.layers.2.blocks.4.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+118 th weight: module.layers.2.blocks.4.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+119 th weight: module.layers.2.blocks.4.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+120 th weight: module.layers.2.blocks.4.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+121 th weight: module.layers.2.blocks.4.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+122 th weight: module.layers.2.blocks.4.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+123 th weight: module.layers.2.blocks.4.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+124 th weight: module.layers.2.blocks.4.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+125 th weight: module.layers.2.blocks.4.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+126 th weight: module.layers.2.blocks.4.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+127 th weight: module.layers.2.blocks.5.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+128 th weight: module.layers.2.blocks.5.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+129 th weight: module.layers.2.blocks.5.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+130 th weight: module.layers.2.blocks.5.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+131 th weight: module.layers.2.blocks.5.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+132 th weight: module.layers.2.blocks.5.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+133 th weight: module.layers.2.blocks.5.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+134 th weight: module.layers.2.blocks.5.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+135 th weight: module.layers.2.blocks.5.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+136 th weight: module.layers.2.blocks.5.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+137 th weight: module.layers.2.blocks.5.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+138 th weight: module.layers.2.blocks.5.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+139 th weight: module.layers.2.blocks.5.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+140 th weight: module.layers.2.blocks.6.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+141 th weight: module.layers.2.blocks.6.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+142 th weight: module.layers.2.blocks.6.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+143 th weight: module.layers.2.blocks.6.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+144 th weight: module.layers.2.blocks.6.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+145 th weight: module.layers.2.blocks.6.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+146 th weight: module.layers.2.blocks.6.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+147 th weight: module.layers.2.blocks.6.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+148 th weight: module.layers.2.blocks.6.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+149 th weight: module.layers.2.blocks.6.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+150 th weight: module.layers.2.blocks.6.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+151 th weight: module.layers.2.blocks.6.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+152 th weight: module.layers.2.blocks.6.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+153 th weight: module.layers.2.blocks.7.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+154 th weight: module.layers.2.blocks.7.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+155 th weight: module.layers.2.blocks.7.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+156 th weight: module.layers.2.blocks.7.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+157 th weight: module.layers.2.blocks.7.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+158 th weight: module.layers.2.blocks.7.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+159 th weight: module.layers.2.blocks.7.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+160 th weight: module.layers.2.blocks.7.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+161 th weight: module.layers.2.blocks.7.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+162 th weight: module.layers.2.blocks.7.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+163 th weight: module.layers.2.blocks.7.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+164 th weight: module.layers.2.blocks.7.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+165 th weight: module.layers.2.blocks.7.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+166 th weight: module.layers.2.blocks.8.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+167 th weight: module.layers.2.blocks.8.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+168 th weight: module.layers.2.blocks.8.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+169 th weight: module.layers.2.blocks.8.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+170 th weight: module.layers.2.blocks.8.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+171 th weight: module.layers.2.blocks.8.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+172 th weight: module.layers.2.blocks.8.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+173 th weight: module.layers.2.blocks.8.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+174 th weight: module.layers.2.blocks.8.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+175 th weight: module.layers.2.blocks.8.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+176 th weight: module.layers.2.blocks.8.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+177 th weight: module.layers.2.blocks.8.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+178 th weight: module.layers.2.blocks.8.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+179 th weight: module.layers.2.blocks.9.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+180 th weight: module.layers.2.blocks.9.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+181 th weight: module.layers.2.blocks.9.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+182 th weight: module.layers.2.blocks.9.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+183 th weight: module.layers.2.blocks.9.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+184 th weight: module.layers.2.blocks.9.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+185 th weight: module.layers.2.blocks.9.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+186 th weight: module.layers.2.blocks.9.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+187 th weight: module.layers.2.blocks.9.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+188 th weight: module.layers.2.blocks.9.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+189 th weight: module.layers.2.blocks.9.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+190 th weight: module.layers.2.blocks.9.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+191 th weight: module.layers.2.blocks.9.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+192 th weight: module.layers.2.blocks.10.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+193 th weight: module.layers.2.blocks.10.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+194 th weight: module.layers.2.blocks.10.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+195 th weight: module.layers.2.blocks.10.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+196 th weight: module.layers.2.blocks.10.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+197 th weight: module.layers.2.blocks.10.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+198 th weight: module.layers.2.blocks.10.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+199 th weight: module.layers.2.blocks.10.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+200 th weight: module.layers.2.blocks.10.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+201 th weight: module.layers.2.blocks.10.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+202 th weight: module.layers.2.blocks.10.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+203 th weight: module.layers.2.blocks.10.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+204 th weight: module.layers.2.blocks.10.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+205 th weight: module.layers.2.blocks.11.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+206 th weight: module.layers.2.blocks.11.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+207 th weight: module.layers.2.blocks.11.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+208 th weight: module.layers.2.blocks.11.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+209 th weight: module.layers.2.blocks.11.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+210 th weight: module.layers.2.blocks.11.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+211 th weight: module.layers.2.blocks.11.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+212 th weight: module.layers.2.blocks.11.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+213 th weight: module.layers.2.blocks.11.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+214 th weight: module.layers.2.blocks.11.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+215 th weight: module.layers.2.blocks.11.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+216 th weight: module.layers.2.blocks.11.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+217 th weight: module.layers.2.blocks.11.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+218 th weight: module.layers.2.blocks.12.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+219 th weight: module.layers.2.blocks.12.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+220 th weight: module.layers.2.blocks.12.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+221 th weight: module.layers.2.blocks.12.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+222 th weight: module.layers.2.blocks.12.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+223 th weight: module.layers.2.blocks.12.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+224 th weight: module.layers.2.blocks.12.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+225 th weight: module.layers.2.blocks.12.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+226 th weight: module.layers.2.blocks.12.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+227 th weight: module.layers.2.blocks.12.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+228 th weight: module.layers.2.blocks.12.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+229 th weight: module.layers.2.blocks.12.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+230 th weight: module.layers.2.blocks.12.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+231 th weight: module.layers.2.blocks.13.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+232 th weight: module.layers.2.blocks.13.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+233 th weight: module.layers.2.blocks.13.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+234 th weight: module.layers.2.blocks.13.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+235 th weight: module.layers.2.blocks.13.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+236 th weight: module.layers.2.blocks.13.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+237 th weight: module.layers.2.blocks.13.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+238 th weight: module.layers.2.blocks.13.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+239 th weight: module.layers.2.blocks.13.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+240 th weight: module.layers.2.blocks.13.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+241 th weight: module.layers.2.blocks.13.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+242 th weight: module.layers.2.blocks.13.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+243 th weight: module.layers.2.blocks.13.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+244 th weight: module.layers.2.blocks.14.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+245 th weight: module.layers.2.blocks.14.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+246 th weight: module.layers.2.blocks.14.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+247 th weight: module.layers.2.blocks.14.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+248 th weight: module.layers.2.blocks.14.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+249 th weight: module.layers.2.blocks.14.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+250 th weight: module.layers.2.blocks.14.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+251 th weight: module.layers.2.blocks.14.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+252 th weight: module.layers.2.blocks.14.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+253 th weight: module.layers.2.blocks.14.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+254 th weight: module.layers.2.blocks.14.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+255 th weight: module.layers.2.blocks.14.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+256 th weight: module.layers.2.blocks.14.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+257 th weight: module.layers.2.blocks.15.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+258 th weight: module.layers.2.blocks.15.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+259 th weight: module.layers.2.blocks.15.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+260 th weight: module.layers.2.blocks.15.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+261 th weight: module.layers.2.blocks.15.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+262 th weight: module.layers.2.blocks.15.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+263 th weight: module.layers.2.blocks.15.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+264 th weight: module.layers.2.blocks.15.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+265 th weight: module.layers.2.blocks.15.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+266 th weight: module.layers.2.blocks.15.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+267 th weight: module.layers.2.blocks.15.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+268 th weight: module.layers.2.blocks.15.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+269 th weight: module.layers.2.blocks.15.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+270 th weight: module.layers.2.blocks.16.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+271 th weight: module.layers.2.blocks.16.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+272 th weight: module.layers.2.blocks.16.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+273 th weight: module.layers.2.blocks.16.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+274 th weight: module.layers.2.blocks.16.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+275 th weight: module.layers.2.blocks.16.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+276 th weight: module.layers.2.blocks.16.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+277 th weight: module.layers.2.blocks.16.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+278 th weight: module.layers.2.blocks.16.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+279 th weight: module.layers.2.blocks.16.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+280 th weight: module.layers.2.blocks.16.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+281 th weight: module.layers.2.blocks.16.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+282 th weight: module.layers.2.blocks.16.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+283 th weight: module.layers.2.blocks.17.norm1.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+284 th weight: module.layers.2.blocks.17.norm1.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+285 th weight: module.layers.2.blocks.17.attn.relative_position_bias_table , shape =  torch.Size([169, 16]) , weight.dtype =  torch.float32
+286 th weight: module.layers.2.blocks.17.attn.qkv.weight , shape =  torch.Size([1536, 512]) , weight.dtype =  torch.float32
+287 th weight: module.layers.2.blocks.17.attn.qkv.bias , shape =  torch.Size([1536]) , weight.dtype =  torch.float32
+288 th weight: module.layers.2.blocks.17.attn.proj.weight , shape =  torch.Size([512, 512]) , weight.dtype =  torch.float32
+289 th weight: module.layers.2.blocks.17.attn.proj.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+290 th weight: module.layers.2.blocks.17.norm2.weight , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+291 th weight: module.layers.2.blocks.17.norm2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+292 th weight: module.layers.2.blocks.17.mlp.fc1.weight , shape =  torch.Size([2048, 512]) , weight.dtype =  torch.float32
+293 th weight: module.layers.2.blocks.17.mlp.fc1.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+294 th weight: module.layers.2.blocks.17.mlp.fc2.weight , shape =  torch.Size([512, 2048]) , weight.dtype =  torch.float32
+295 th weight: module.layers.2.blocks.17.mlp.fc2.bias , shape =  torch.Size([512]) , weight.dtype =  torch.float32
+296 th weight: module.layers.2.downsample.reduction.weight , shape =  torch.Size([1024, 2048]) , weight.dtype =  torch.float32
+297 th weight: module.layers.2.downsample.norm.weight , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+298 th weight: module.layers.2.downsample.norm.bias , shape =  torch.Size([2048]) , weight.dtype =  torch.float32
+299 th weight: module.layers.3.blocks.0.norm1.weight , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+300 th weight: module.layers.3.blocks.0.norm1.bias , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+301 th weight: module.layers.3.blocks.0.attn.relative_position_bias_table , shape =  torch.Size([169, 32]) , weight.dtype =  torch.float32
+302 th weight: module.layers.3.blocks.0.attn.qkv.weight , shape =  torch.Size([3072, 1024]) , weight.dtype =  torch.float32
+303 th weight: module.layers.3.blocks.0.attn.qkv.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+304 th weight: module.layers.3.blocks.0.attn.proj.weight , shape =  torch.Size([1024, 1024]) , weight.dtype =  torch.float32
+305 th weight: module.layers.3.blocks.0.attn.proj.bias , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+306 th weight: module.layers.3.blocks.0.norm2.weight , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+307 th weight: module.layers.3.blocks.0.norm2.bias , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+308 th weight: module.layers.3.blocks.0.mlp.fc1.weight , shape =  torch.Size([4096, 1024]) , weight.dtype =  torch.float32
+309 th weight: module.layers.3.blocks.0.mlp.fc1.bias , shape =  torch.Size([4096]) , weight.dtype =  torch.float32
+310 th weight: module.layers.3.blocks.0.mlp.fc2.weight , shape =  torch.Size([1024, 4096]) , weight.dtype =  torch.float32
+311 th weight: module.layers.3.blocks.0.mlp.fc2.bias , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+312 th weight: module.layers.3.blocks.1.norm1.weight , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+313 th weight: module.layers.3.blocks.1.norm1.bias , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+314 th weight: module.layers.3.blocks.1.attn.relative_position_bias_table , shape =  torch.Size([169, 32]) , weight.dtype =  torch.float32
+315 th weight: module.layers.3.blocks.1.attn.qkv.weight , shape =  torch.Size([3072, 1024]) , weight.dtype =  torch.float32
+316 th weight: module.layers.3.blocks.1.attn.qkv.bias , shape =  torch.Size([3072]) , weight.dtype =  torch.float32
+317 th weight: module.layers.3.blocks.1.attn.proj.weight , shape =  torch.Size([1024, 1024]) , weight.dtype =  torch.float32
+318 th weight: module.layers.3.blocks.1.attn.proj.bias , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+319 th weight: module.layers.3.blocks.1.norm2.weight , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+320 th weight: module.layers.3.blocks.1.norm2.bias , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+321 th weight: module.layers.3.blocks.1.mlp.fc1.weight , shape =  torch.Size([4096, 1024]) , weight.dtype =  torch.float32
+322 th weight: module.layers.3.blocks.1.mlp.fc1.bias , shape =  torch.Size([4096]) , weight.dtype =  torch.float32
+323 th weight: module.layers.3.blocks.1.mlp.fc2.weight , shape =  torch.Size([1024, 4096]) , weight.dtype =  torch.float32
+324 th weight: module.layers.3.blocks.1.mlp.fc2.bias , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+325 th weight: module.norm.weight , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+326 th weight: module.norm.bias , shape =  torch.Size([1024]) , weight.dtype =  torch.float32
+327 th weight: module.head.weight , shape =  torch.Size([1000, 1024]) , weight.dtype =  torch.float32
+328 th weight: module.head.bias , shape =  torch.Size([1000]) , weight.dtype =  torch.float32
+||||||||||| Model Stru |||||||||||
+

@@ -110,4 +110,9 @@ Testing notebook.ipynb
 
 wandb/
 mlp_mixer_slr/admm_model/
+mlp_mixer_slr/savlr_model/
 mlp_mixer_slr/__pycache__
+
+swin_slr/admm_model/
+swin_slr/savlr_model/
+swin_slr/__pycache__
