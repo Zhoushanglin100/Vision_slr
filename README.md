@@ -19,7 +19,7 @@
 ## [Swin Transformer](https://github.com/microsoft/Swin-Transformer)
 
 ### Available models
-![](model_lst/Swin_Trans_Model.png)
+![](model_lst/Swin_Tras_Model.png)
 
 ### Run Savlr pruning on Swin Transformer Model
 
