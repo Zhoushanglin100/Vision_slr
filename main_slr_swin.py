@@ -1,5 +1,5 @@
 from __future__ import print_function
-import argparse, sys
+import argparse, sys, pickle
 import torch
 import torch.nn.functional as F
 import torch.nn as nn
@@ -293,7 +293,7 @@ parser.add_argument('--pin-mem', action='store_true', default=False,
                     help='Pin CPU memory in DataLoader for more efficient (sometimes) transfer to GPU.')
 parser.add_argument('--no-prefetcher', action='store_true', default=False,
                     help='disable fast prefetcher')
-parser.add_argument('--output', default='', type=str, metavar='PATH',
+parser.add_argument('--output', default='/data/shanglin/', type=str, metavar='PATH',
                     help='path to output folder (default: none, current dir)')
 parser.add_argument('--experiment', default='', type=str, metavar='NAME',
                     help='name of train experiment, name of sub-folder for output')
@@ -310,8 +310,9 @@ parser.add_argument('--log-wandb', action='store_true', default=False,
                     help='log training and validation metrics to wandb')
 
 args, unknown = parser.parse_known_args()
-wandb.init(config=args)
-wandb.config.update(args)
+if has_wandb:
+    wandb.init(config=args)
+    wandb.config.update(args)
 
 
 def _parse_args():
@@ -406,9 +407,10 @@ def train_one_epoch(ADMM,
         top5.update(acc5.item(), input.size(0))
 
         # -------
-        wandb.log({"iter/train_loss": ce_loss.item()})
-        wandb.log({"iter/train_acc@1": acc1.item()})
-        wandb.log({"iter/train_acc@5": acc5.item()})
+        if has_wandb:
+            wandb.log({"iter/train_loss": ce_loss.item()})
+            wandb.log({"iter/train_acc@1": acc1.item()})
+            wandb.log({"iter/train_acc@5": acc5.item()})
         # -------
 
         optimizer.zero_grad()
@@ -460,7 +462,9 @@ def train_one_epoch(ADMM,
         if last_batch or batch_idx % args.log_interval == 0:
             lrl = [param_group['lr'] for param_group in optimizer.param_groups]
             lr = sum(lrl) / len(lrl)
-            wandb.log({"Hyper/lr": lr})
+
+            if has_wandb:
+                wandb.log({"Hyper/lr": lr})
 
         if batch_idx % args.print_freq == 0:
 
@@ -554,9 +558,10 @@ def validate(model, loader, loss_fn, args, amp_autocast=suppress):
             top5_m.update(acc5.item(), output.size(0))
 
             # -------
-            wandb.log({"iter/test_loss": reduced_loss.item()})
-            wandb.log({"iter/test_acc@1": acc1})
-            wandb.log({"iter/test_acc@5": acc5})
+            if has_wandb:
+                wandb.log({"iter/test_loss": reduced_loss.item()})
+                wandb.log({"iter/test_acc@1": acc1})
+                wandb.log({"iter/test_acc@5": acc5})
             # -------
 
             ### measure elapsed time
@@ -646,7 +651,8 @@ def main():
     _logger.info(
         f'Model {safe_model_name(args.model)} created, param count:{sum([m.numel() for m in model.parameters()])}')
 
-    wandb.watch(model)
+    if has_wandb:
+        wandb.watch(model)
 
     # -------------------
     ### Load dataset
@@ -833,6 +839,12 @@ def main():
 
         best_acc1 = 0
 
+        if has_wandb == False:
+            train_acc = {}
+            test_acc = {}
+            middle_acc = {}
+            condition_d = {}
+
         ### setup checkpoint saver and eval metric tracking
         eval_metric = args.eval_metric
         model_ema = None
@@ -883,9 +895,13 @@ def main():
                                                 saver=None,
                                                 amp_autocast=amp_autocast)
                 
-                wandb.log({"train_acc@1": train_metrics['top1']})
-                wandb.log({"train_acc@5": train_metrics['top5']})
-                
+                if has_wandb:
+                    wandb.log({"train_acc@1": train_metrics['top1']})
+                    wandb.log({"train_acc@5": train_metrics['top5']})
+                else:
+                    train_acc["train_acc@1"] = train_acc.get("train_acc@1", [])+train_metrics['top1']
+                    train_acc["train_acc@5"] = train_acc.get("train_acc@5", [])+train_metrics['top5']
+
                 ### check; Todo: modify validation
                 eval_metrics = validate(model, 
                                         loader_eval, 
@@ -893,8 +909,12 @@ def main():
                                         args, 
                                         amp_autocast=amp_autocast)
                 
-                wandb.log({"test_acc@1": eval_metrics['top1']})
-                wandb.log({"test_acc@5": eval_metrics['top5']})
+                if has_wandb:
+                    wandb.log({"test_acc@1": eval_metrics['top1']})
+                    wandb.log({"test_acc@5": eval_metrics['top5']})
+                else:
+                    test_acc["test_acc@1"] = test_acc.get("test_acc@1", [])+eval_metrics['top1']
+                    test_acc["test_acc@5"] = test_acc.get("test_acc@5", [])+eval_metrics['top5']
 
                 ### step LR for next epoch
                 if lr_scheduler is not None:
@@ -949,8 +969,12 @@ def main():
                     print("(middle check) accuracy after hard-pruning")
                     eval_metrics_mid = validate(model, loader_eval, validate_loss_fn, args, amp_autocast=amp_autocast)
                 
-                    wandb.log({"middle/test_acc@1": eval_metrics_mid['top1']})
-                    wandb.log({"middle/test_acc@5": eval_metrics_mid['top5']})
+                    if has_wandb:
+                        wandb.log({"middle/test_acc@1": eval_metrics_mid['top1']})
+                        wandb.log({"middle/test_acc@5": eval_metrics_mid['top5']})
+                    else:
+                        middle_acc["test_acc@1"] = middle_acc.get("test_acc@1", [])+eval_metrics_mid['top1']
+                        middle_acc["test_acc@5"] = middle_acc.get("test_acc@5", [])+eval_metrics_mid['top5']
 
                     print("(middle check) ACC: ", eval_metrics_mid['top1'], eval_metrics_mid['top5'])
                     # if eval_metrics_mid['top5'] > 86:
@@ -962,6 +986,10 @@ def main():
                     print("Condition 2")
                     print(ADMM.condition2)
             
+                    if has_wandb == False:
+                        condition_d["Condition1"] = condition_d.get("Condition1", [])+ADMM.condition1
+                        condition_d["Condition2"] = condition_d.get("Condition2", [])+ADMM.condition2
+
             dir_save = args.arch+"_slr/"+args.optimization+"_model/admm_train/"
             if not os.path.exists(dir_save):
                 os.makedirs(dir_save)
@@ -1003,7 +1031,29 @@ def main():
                                                                     args.config_file, 
                                                                     args.sparsity_type,
                                                                     args.ext))
-    
+            ### save result
+            if has_wandb == False:
+
+                if not os.path.exists("results"):
+                    os.makedirs("results")
+                
+                f = open("results/middle_acc.pkl", "wb")
+                pickle.dump(middle_acc, f)
+                f.close()
+
+                f = open("results/train_acc.pkl", "wb")
+                pickle.dump(train_acc, f)
+                f.close()
+
+                f = open("results/test_acc.pkl", "wb")
+                pickle.dump(test_acc, f)
+                f.close()
+
+                if args.optimization == "savlr":
+                    f = open("results/condition.pkl", "wb")
+                    pickle.dump(condition_d, f)
+                    f.close()
+
     """================"""
     """End ADMM retrain"""
     """================"""
@@ -1014,6 +1064,10 @@ def main():
     
     if args.masked_retrain:
         
+        if has_wandb == False:
+            retrain_train_acc = {}
+            retrain_test_acc = {}
+
         print("\n!!!!!!!!!!!!!!!!!!! RETRAIN !!!!!!!!!!!!!!!!!")
 
         ### setup checkpoint saver and eval metric tracking
@@ -1060,8 +1114,13 @@ def main():
                                     validate_loss_fn, args, 
                                     amp_autocast=amp_autocast)
 
-        wandb.log({"retrain_test_acc@1": eval_metrics_slr["top1"]})
-        wandb.log({"retrain_test_acc@5": eval_metrics_slr["top5"]})
+        if has_wandb:
+            wandb.log({"retrain_test_acc@1": eval_metrics_slr["top1"]})
+            wandb.log({"retrain_test_acc@5": eval_metrics_slr["top5"]})
+        else:
+            retrain_test_acc["retrain_test_acc@1"] = retrain_test_acc.get("retrain_test_acc@1", [])+eval_metrics_slr['top1']
+            retrain_test_acc["retrain_test_acc@5"] = retrain_test_acc.get("retrain_test_acc@5", [])+eval_metrics_slr['top5']
+
         admm.test_sparsity(args, ADMM, model)
         
         best_acc1 = eval_metrics_slr["top1"]
@@ -1076,9 +1135,12 @@ def main():
         eval_metrics_hp = validate(model, loader_eval, 
                                     validate_loss_fn, args, 
                                     amp_autocast=amp_autocast)
-
-        wandb.log({"retrain_test_acc@1": eval_metrics_hp["top1"]})
-        wandb.log({"retrain_test_acc@5": eval_metrics_hp["top5"]})
+        if has_wandb:
+            wandb.log({"retrain_test_acc@1": eval_metrics_hp["top1"]})
+            wandb.log({"retrain_test_acc@5": eval_metrics_hp["top5"]})
+        else:
+            retrain_test_acc["retrain_test_acc@1"] = retrain_test_acc.get("retrain_test_acc@1", [])+eval_metrics_hp['top1']
+            retrain_test_acc["retrain_test_acc@5"] = retrain_test_acc.get("retrain_test_acc@5", [])+eval_metrics_hp['top5']
 
         for epoch in range(1, args.retrain_epoch+1):
 
@@ -1089,18 +1151,26 @@ def main():
                                               lr_scheduler=lr_scheduler, 
                                               saver=saver, 
                                               amp_autocast=amp_autocast)
-                                 
-            wandb.log({"retrain_train_acc@1": retrain_metrics["top1"]})
-            wandb.log({"retrain_train_acc@5": retrain_metrics["top5"]})
+            if has_wandb:             
+                wandb.log({"retrain_train_acc@1": retrain_metrics["top1"]})
+                wandb.log({"retrain_train_acc@5": retrain_metrics["top5"]})
+            else:
+                retrain_train_acc["retrain_train_acc@1"] = retrain_train_acc.get("retrain_train_acc@1", [])+retrain_metrics['top1']
+                retrain_train_acc["retrain_train_acc@5"] = retrain_train_acc.get("retrain_train_acc@5", [])+retrain_metrics['top5']
+
 
             ### check; Todo: modify validation
             eval_metrics_rt = validate(model, loader_eval, 
                                         validate_loss_fn, args, 
                                         amp_autocast=amp_autocast)
-
-            wandb.log({"retrain_test_acc@1": eval_metrics_rt["top1"]})
-            wandb.log({"retrain_test_acc@5": eval_metrics_rt["top5"]})
             
+            if has_wandb:
+                wandb.log({"retrain_test_acc@1": eval_metrics_rt["top1"]})
+                wandb.log({"retrain_test_acc@5": eval_metrics_rt["top5"]})
+            else:
+                retrain_test_acc["retrain_test_acc@1"] = retrain_test_acc.get("retrain_test_acc@1", [])+eval_metrics_rt['top1']
+                retrain_test_acc["retrain_test_acc@5"] = retrain_test_acc.get("retrain_test_acc@5", [])+eval_metrics_rt['top5']
+                
 
             ### step LR for next epoch
             if lr_scheduler is not None:
@@ -1160,6 +1230,19 @@ def main():
                                         amp_autocast=amp_autocast)
         admm.test_sparsity(args, ADMM, model_best_retrain)
 
+        ### save result
+        if has_wandb == False:
+
+            if not os.path.exists("results"):
+                os.makedirs("results")
+
+            f = open("results/retrain_train_acc.pkl", "wb")
+            pickle.dump(retrain_train_acc, f)
+            f.close()
+
+            f = open("results/retrain_test_acc.pkl", "wb")
+            pickle.dump(retrain_test_acc, f)
+            f.close()
 
     """=================="""
     """End masked retrain"""

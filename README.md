@@ -2,7 +2,7 @@
 
 **Follow [Pytorch Image Models](https://github.com/rwightman/pytorch-image-models) codebase to install required packages and see List of  Models with Pretrained Weights**
 
-[Available model list](model_list.txt)
+[Available model list](model_lst/model_list.txt)
 
 ---
 

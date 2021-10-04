@@ -11,8 +11,12 @@ import random
 import numpy as np
 from numpy import linalg as LA
 import yaml
-import wandb
 
+try:
+    import wandb
+    has_wandb = True
+except ImportError: 
+    has_wandb = False
 
 
 class ADMM: #ADMM class (but also used for SLR training)
@@ -496,7 +500,6 @@ def z_u_update(args, ADMM, model, device, train_loader, optimizer, epoch, data, 
         
         # print("!!!!! SLR")
 
-
         if not args.admm_train:
             return
 
@@ -507,7 +510,9 @@ def z_u_update(args, ADMM, model, device, train_loader, optimizer, epoch, data, 
 
             pow = 1 - (1/(ADMM.k**args.r))
             alpha = 1 - (1/(args.M*(ADMM.k**pow)))
-            wandb.log({"Hyper/alpha_slr": alpha})
+            
+            if has_wandb:
+                wandb.log({"Hyper/alpha_slr": alpha})
 
             total_n1 = 0
             total_n2 = 0
@@ -527,7 +532,11 @@ def z_u_update(args, ADMM, model, device, train_loader, optimizer, epoch, data, 
                 ADMM.ADMM_Lambda_prev[name] = ADMM.ADMM_Lambda[name] #save prev.
 
             satisfied1 = Lagrangian1(ADMM, model) #check if surrogate optimality condition is satisfied.
-            wandb.log({"condition/Condition1": satisfied1})
+
+            if has_wandb:
+                wandb.log({"condition/Condition1": satisfied1})
+            # else:
+            #     condition_d["Condition1"] = condition_d.get("Condition1", [])+satisfied1
 
             ADMM.condition1.append(satisfied1)
 
@@ -537,7 +546,9 @@ def z_u_update(args, ADMM, model, device, train_loader, optimizer, epoch, data, 
                     ADMM.s = alpha * (ADMM.s*total_n1/total_n2) 
                     print("savlr s:")
                     print(ADMM.s)
-                    wandb.log({"Hyper/savlr_s": ADMM.s})
+                    
+                    if has_wandb:
+                        wandb.log({"Hyper/savlr_s": ADMM.s})
 
                 for i, (name, W) in enumerate(model.named_parameters()):
                     if name not in ADMM.prune_ratios:
@@ -594,7 +605,10 @@ def z_u_update(args, ADMM, model, device, train_loader, optimizer, epoch, data, 
                
 
             satisfied2 = Lagrangian2(ADMM, model) #check if surrogate optimality condition is satisfied.
-            wandb.log({"condition/Condition2": satisfied2})
+            if has_wandb:
+                wandb.log({"condition/Condition2": satisfied2})
+            # else:
+            #     condition_d["Condition2"] = condition_d.get("Condition2", [])+satisfied2
 
             ADMM.condition2.append(satisfied2)
 
@@ -603,16 +617,19 @@ def z_u_update(args, ADMM, model, device, train_loader, optimizer, epoch, data, 
 
                 pow = 1 - (1/(ADMM.k**args.r))
                 alpha = 1 - (1/(args.M*(ADMM.k**pow))) 
-                wandb.log({"Hyper/alpha_slr": alpha})
+                
+                if has_wandb:
+                    wandb.log({"Hyper/alpha_slr": alpha})
 
                 ADMM.k += 1 #increase k
-
 
                 if total_n1 != 0 and total_n2 != 0:  #if norms are not 0, update stepsize
                     ADMM.s = alpha * (ADMM.s*total_n1/total_n2) 
                     print("savlr s:")
                     print(ADMM.s)
-                    wandb.log({"Hyper/savlr_s": ADMM.s})
+                    
+                    if has_wandb:
+                        wandb.log({"Hyper/savlr_s": ADMM.s})
                 
                 for i, (name, W) in enumerate(model.named_parameters()):
                     if name not in ADMM.prune_ratios:
